@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background-color: #000;
+      color: #f6fa05;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background-color: #111;
+      color: #f8fc04;
+      padding: 40px 0;
+      text-align: center;
+      animation: slideDown 1s ease;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      background-color: #222;
+      flex-wrap: wrap;
+      animation: slideIn 1.2s ease;
+    }
+
+    nav ul li {
+      margin: 10px;
+    }
+
+    nav ul li a {
+      color: #f8f402;
+      text-decoration: none;
+      padding: 10px 16px;
+      background-color: #444;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #777;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+      animation: fadeIn 2s ease;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      position: relative;
+      animation: animateHeading 1s ease-in-out;
+    }
+
+    @keyframes animateHeading {
+      0% { opacity: 0; transform: translateX(-50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background: #1e1e1e;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(255,255,255,0.1);
+    }
+
+    .info-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .info-column {
+      flex: 1;
+      min-width: 250px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 3s ease;
+    }
+
+    a {
+      color: #fcec09;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-links a {
+      margin-right: 15px;
+      font-size: 1.2rem;
+    }
+
+    .resume-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #4fc3f7;
+      color: #000;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .resume-link:hover {
+      background-color: #0288d1;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+      .info-columns {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="riddhi.jpg" alt="My Photo" />
+    <h1>My Portfolio</h1>
+    <p>Web Developer | Backend Developer | Tech Enthusiast</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Projects</a></li>
+      <li><a href="#education">Skills</a></li>
+      <li><a href="#projects">Experience</a></li>
+      <li><a href="#skills">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I am an enthusiastic individual with a growing interest in programming. I am an enthusiastic and dedicated BCA student with a strong foundation in C , C++ , HTML , CSS , Python languages .With a strong foundation in the basics of these languages , a passion for problem solving , I am dedicated to honing my skills amd expanding my knowledge in this field.
+</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="info-columns">
+        <div class="info-column">
+          <h3>Intern</h3>
+          <p>Accenture | May 2025 - July 2025</p>
+          <p>Worked on real-time projects, collaborated with cross-functional teams, and enhanced my skills . Gained valuable exposure to corporate workflows, problem-solving, and professional communication.
+
+</p>
+        </div>
+        <div class="info-column">
+          <h3>Student Coordinator</h3>
+          <p>April 2025 - May 2025</p>
+          <p>Acted as a bridge between faculty and students, ensuring smooth communication and coordination during academic and extracurricular activities. Took initiative in planning events, managing schedules, and supporting peers, which strengthened my leadership, teamwork, and communication skills.
+
+</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="info-columns">
+        <div class="info-column">
+          <h3>Bachelor of Computer Applications</h3>
+          <p>Dr. Virendra Swarup Institute of Computer Studies | 2023 - 2026</p>
+        </div>
+        <div class="info-column">
+          <h3>Higher Secondary Education</h3>
+          <p>Mariampur Senior Secondary School | 2020 - 2021</p>
+        </div>
+        <div class="info-column">
+          <h3>Secondary Education</h3>
+          <p>Mariampur Senior Secondary School | 2018 - 2019</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio site built with HTML, CSS, and JavaScript. Fully responsive with smooth animations.</p>
+        </div>
+        <div class="project">
+          <h3>Online Voting Machine</h3>
+          <p> A simple and secure system for casting and counting votes digitally.</p>
+        </div>
+        <div class="project">
+          <h3>DigiRaksha</h3>
+          <p>Developed a secure digital vault using Python and Flask to store and manage personal credentials, documents, and medical records with encryption, cloud backup, and smart filtering features.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python , C , C++</li>
+        <li>HTML , CSS , Js </li>
+        <li>Canva , Wepik</li>
+        <li>Networking</li>
+        <li>Leadership , Communication , Teamwork</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, feel free to drop a message via email or connect on social media. I'm always open to exciting collaborations and new ideas!</p>
+      <p>Email: yourname@example.com</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/riddhi-maheshwari-654a84313" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/ri.ddhi3583?igsh=MTRvd2gzYWJ0eGx6eA==" target="_blank">Instagram</a>
+      </div>
+      <a class="resume-link" href="691f643a-9040-4c94-ad25-263904303cb2.pdf" target="_blank">Download Resume</a>
+
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Riddhi Maheshwari. All rights reserved.</p>
+  </footer>
+</body>
+</html>
